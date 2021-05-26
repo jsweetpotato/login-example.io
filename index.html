@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="wrap">
+        <h3>Email Validation Check</h3>
+        <form id="form" action="#">
+            <div class="emailInputBox">
+                <input type="text" name="" id="email"
+                placeholder="Enter Email Address" onkeydown="emailValidation()">
+                <div class="text-wrap">
+                    <span id="email-text"></span>
+                </div>
+            </div>
+            <div class="pwInputBox">
+                <input type="password" name="" id="password" placeholder="Enter Password" onkeydown="pwValidation()">
+                <div class="text-wrap">
+                <span id="password-text"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="valid.js"></script>
+</body>
+</html>

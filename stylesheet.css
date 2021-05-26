@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #373737;
+}
+
+.wrap {
+    width: fit-content;
+    margin-top: 40vh;
+}
+h3{
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #f9f9f9;
+}
+#form{
+    position: relative;
+}
+#email, #password{
+    width: 300px;
+    background: #292929;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+#form .emailInputBox, .pwInputBox{
+    position: relative;
+}
+
+#form.emailInvalid .emailInputBox:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(image/invalid.png);
+    background-size: cover;
+    z-index: 4;
+}
+#form.emailValid .emailInputBox:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(image/valid.png);
+    background-size: cover;
+    z-index: 4;
+}
+
+#form.pwInvalid .pwInputBox:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(image/invalid.png);
+    background-size: cover;
+    z-index: 4;
+}
+
+#form.pwValid .pwInputBox:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(image/valid.png);
+    background-size: cover;
+    z-index: 4;
+}
+
+.text-wrap{
+    position: relative;
+    height: 40px;
+}
+
+#email-text #password-text{
+    display: block;
+    color: 000;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px;
+}
