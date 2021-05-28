@@ -29,19 +29,19 @@ function pwValidation(){
     let form = document.getElementById("form");
     let password = document.getElementById("password").value;
     let text = document.getElementById("password-text");
-    let pattern = /([A-Za-z,.!?]*){8,16}/;
+    let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.{8,}).*$/;
     let valid = "pwValid";
     let invalid = "pwInvalid";
 
     if (password.match(pattern)) {
         form.classList.add(valid);
         form.classList.remove(invalid);
-        text.innerHTML = "Your Email Address in Valid."
+        text.innerHTML = "Your password in Valid."
         text.style.color = "#00ff00"
     } else{
         form.classList.remove(valid);
         form.classList.add(invalid);
-        text.innerHTML = "Please Enter Valid Email Address"
+        text.innerHTML = "Please Enter Valid Password <br/> have to Uppercase, lowercase, number"
         text.style.color = "#ff0000"
     }
     if (password == "") {

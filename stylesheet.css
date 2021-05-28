@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,20 +15,26 @@ body {
 
 .wrap {
     width: fit-content;
-    margin-top: 40vh;
+    margin-top: 30vh;
 }
-h3{
+
+h3 {
     position: relative;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: 60px;
+    font-size: 25px;
     font-weight: 500;
     letter-spacing: 1px;
     color: #f9f9f9;
 }
-#form{
+
+#form {
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
-#email, #password{
+
+#email,
+#password {
     width: 300px;
     background: #292929;
     outline: none;
@@ -38,35 +45,13 @@ h3{
     font-size: 18px;
 }
 
-
-#form .emailInputBox, .pwInputBox{
+#form .emailInputBox,
+.pwInputBox {
     position: relative;
 }
 
-#form.emailInvalid .emailInputBox:before{
-    content: '';
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 24px;
-    height: 24px;
-    background: url(image/invalid.png);
-    background-size: cover;
-    z-index: 4;
-}
-#form.emailValid .emailInputBox:before{
-    content: '';
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 24px;
-    height: 24px;
-    background: url(image/valid.png);
-    background-size: cover;
-    z-index: 4;
-}
-
-#form.pwInvalid .pwInputBox:before{
+#form.emailInvalid .emailInputBox:before,
+#form.pwInvalid .pwInputBox:before {
     content: '';
     position: absolute;
     right: 12px;
@@ -78,7 +63,8 @@ h3{
     z-index: 4;
 }
 
-#form.pwValid .pwInputBox:before{
+#form.emailValid .emailInputBox:before,
+#form.pwValid .pwInputBox:before {
     content: '';
     position: absolute;
     right: 12px;
@@ -90,15 +76,30 @@ h3{
     z-index: 4;
 }
 
-.text-wrap{
+
+.text-wrap {
     position: relative;
     height: 40px;
+    width: 320px;
 }
 
-#email-text #password-text{
+#email-text, #password-text {
     display: block;
     color: 000;
     font-weight: 300;
     font-style: italic;
     padding: 5px;
+}
+
+#submit {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #f9f9f9;
+    color: #373737;
+    cursor: pointer;
 }
